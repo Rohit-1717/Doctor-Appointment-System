@@ -1,16 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Doctors from "./pages/Doctors ";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import MyProfile from "./pages/MyProfile";
+import MyAppointments from "./pages/MyAppointments";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className='text-center text-red-700 font-extrabold text-3xl'>Setup Done!!</h1>
-    </>
-  )
+    <div className="mx-4 sm:mx-[10%]">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/doctors" element={<Doctors />} />
+        <Route path="/doctors/:speciality" element={<Doctors />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/my-profile" element={<MyProfile />} />
+        <Route path="/my-appointments" element={<MyAppointments />} />
+        <Route path="/my-appointments/:docId" element={<MyAppointments />} />
+      </Routes>
+    </div>
+  );
 }
-
-export default App
+export default App;
