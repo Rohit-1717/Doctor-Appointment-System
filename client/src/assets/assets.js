@@ -30,6 +30,7 @@ import Gayno_Icon from "./Gyno_Icon.png";
 import Derma_Icom from "./Derma_icon.png";
 import Pedia_Icon from "./Pedia_Icon.png";
 import Neuro_Icon from "./Neuro_Icon.png";
+import Banner_Doc from "./appointment_img.png";
 
 export const assets = {
   logo,
@@ -38,6 +39,7 @@ export const assets = {
   group_people,
   Doctors_banner,
   group_DOCS,
+  Banner_Doc,
 };
 
 export const specialityData = [
