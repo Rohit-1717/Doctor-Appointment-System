@@ -12,6 +12,7 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between text-sm py-2 mb-5 border-b border-b-gray-400">
       <img
+        onClick={() => navigate("/")}
         className=" w-52 cursor-pointer"
         src={assets.logoTransparent}
         alt="Logo"
